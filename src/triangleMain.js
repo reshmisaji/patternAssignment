@@ -1,5 +1,5 @@
-const triangleRight = require('./triangle.js').triangleRight;
-const triangleLeft = require('./triangle.js').triangleLeft;
+const triangleLibrary = require('./triangle.js');
+const {triangleRight,triangleLeft} = triangleLibrary;
 
 const main = function(align = process.argv[2],number = process.argv[3]){
 
@@ -11,4 +11,5 @@ const main = function(align = process.argv[2],number = process.argv[3]){
     console.log(triangleRight(number));
   }
 }
+
 main();
