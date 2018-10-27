@@ -1,4 +1,5 @@
 #! /bin/bash
+set -e
 ./run_test.sh ./src/triangle.js ./test/inputFileLeft ./test/expectedOutputLeft
 ./run_test.sh ./src/triangle.js ./test/inputFileRight ./test/expectedOutputRight
 
