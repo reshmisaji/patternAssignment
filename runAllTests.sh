@@ -1,7 +1,7 @@
 #! /bin/bash
 set -e
-./run_test.sh ./src/triangle.js ./test/inputFileLeft ./test/expectedOutputLeft
-./run_test.sh ./src/triangle.js ./test/inputFileRight ./test/expectedOutputRight
+./run_test.sh ./src/patternsMainLibrary.js ./test/inputFileLeft ./test/expectedOutputLeft
+./run_test.sh ./src/patternsMainLibrary.js ./test/inputFileRight ./test/expectedOutputRight
 
 ./run_test.sh ./src/rectangle.js ./test/inputFileFilledRectangle ./test/expectedOutputFilledRectangle
 ./run_test.sh ./src/rectangle.js ./test/inputFileEmptyRectangle ./test/expectedOutputEmptyRectangle
