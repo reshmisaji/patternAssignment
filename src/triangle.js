@@ -33,13 +33,17 @@ const triangleRight = function(number){
   return line;
 }
 
-let align = process.argv[2];
-let number = process.argv[3];
+const main = function(){
+  let align = process.argv[2];
+  let number = process.argv[3];
 
-if(align == "left"){
-  console.log(triangleLeft(number));
+  if(align == "left"){
+    console.log(triangleLeft(number));
+  }
+
+  if(align == "right"){
+    console.log(triangleRight(number));
+  }
 }
- 
-if(align == "right"){
-  console.log(triangleRight(number));
-}
+
+main();
