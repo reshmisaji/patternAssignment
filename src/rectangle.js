@@ -1,4 +1,4 @@
-const isOutLine = function(heightIndex){
+const isOutLine = function(heightIndex,height){
   return ((heightIndex == 0) || (heightIndex == height -1));
 }
 
@@ -11,12 +11,12 @@ const isEven = function(heightIndex){
   return (heightIndex % 2 == 0);
 }
 
-const emptyRectangle = function(lineWidth,heightIndex,line){
+const emptyRectangle = function(lineWidth,heightIndex,line,height){
   let row = line;
   let character;
 
   for(let widthIndex = 0; widthIndex < lineWidth; widthIndex ++){
-    if(isOutLine(heightIndex)){
+    if(isOutLine(heightIndex,height)){
       character = "*";
       row = addCharacter(row,character);
     } else {
@@ -37,7 +37,7 @@ const generateEmpty = function(width,height){
     lineDelimiter = "\n";
     let character = "*";
     line = addCharacter(line,character);
-    line = emptyRectangle(lineWidth,heightIndex,line); 
+    line = emptyRectangle(lineWidth,heightIndex,line,height); 
     character = "*";
     line = addCharacter(line,character);
   }
@@ -112,3 +112,5 @@ const generateRectangle = function(width,height,type){
 const main = function(type = process.argv[2],height = +process.argv[3],width = +process.argv[4]){
   console.log(generateRectangle(width,height,type));
 }
+
+main();
