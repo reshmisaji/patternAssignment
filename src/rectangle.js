@@ -109,7 +109,6 @@ const generateRectangle = function(width,height,type){
   return line;
 }
 
-let type = process.argv[2];
-let height = +process.argv[3];
-let width = +process.argv[4];
-console.log(generateRectangle(width,height,type));
+const main = function(type = process.argv[2],height = +process.argv[3],width = +process.argv[4]){
+  console.log(generateRectangle(width,height,type));
+}
