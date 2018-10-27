@@ -79,7 +79,7 @@ const generateAngledDmnd = function(height){
 
 /*..................main function.....................................*/
 
-const main = function(type,height){
+const main = function(type =  process.argv[2],height = process.argv[3]){
   height = height - (height % 2) + 1;
 
   if(type == "filled"){
@@ -91,4 +91,4 @@ const main = function(type,height){
   }
 }
 
-main(process.argv[2],process.argv[3]);
+main();
