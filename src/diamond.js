@@ -77,18 +77,5 @@ const generateAngledDmnd = function(height){
   return diamond;
 }
 
-/*..................main function.....................................*/
-
-const main = function(type =  process.argv[2],height = process.argv[3]){
-  height = height - (height % 2) + 1;
-
-  if(type == "filled"){
-    console.log(generateDiamond(height,"*"));
-  }else if(type == "hollow"){
-    console.log(generateDiamond(height," "));
-  }else{
-  console.log(generateAngledDmnd(height));
-  }
-}
-
-main();
+exports.generateAngledDmnd = generateAngledDmnd;
+exports.generateDiamond = generateDiamond;
