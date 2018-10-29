@@ -110,3 +110,5 @@ const generateRectangle = function(width,height,type){
 }
 
 exports.generateRectangle = generateRectangle;
+exports.isOutLine = isOutLine;
+exports.isEven = isEven;

@@ -1,5 +1,6 @@
 #! /bin/bash
 set -e
+trap 'echo failed' EXIT
 ./run_test.sh ./src/triangleMain.js ./test/inputFileLeft ./test/expectedOutputLeft
 ./run_test.sh ./src/triangleMain.js ./test/inputFileRight ./test/expectedOutputRight
 
