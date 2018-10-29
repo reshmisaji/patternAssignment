@@ -83,4 +83,10 @@ assert.deepEqual(addCharacter("*"," "),"* ");
 assert.deepEqual(addCharacter("- ","*"),"- *");
 displayTestReport("All tests passed for add character");
 
+/*..................is even.............................*/
+assert.deepEqual(isEven(1),false);
+assert.deepEqual(isEven(0),true);
+displayTestReport("All tests passed for is even");
+
+
 console.log(repeatCharacter("⌱",102));
