@@ -33,10 +33,17 @@ assert.deepEqual(generateRectangle(2,2,"filled"),"**\n**","Filled rectangle with
 displayTestReport("All tests passed for filled rectangle");
 
 /*................hollow rectangle........................*/
-assert.deepEqual(generateRectangle(2,1,"empty"),"**");//,"Empty rectangle with width 1 and height 1");
-assert.deepEqual(generateRectangle(2,1,"empty"),"**","Empty rectangle with width 2 and height 1 ");
-assert.deepEqual(generateRectangle(2,2,"empty"),"**\n**","Empty rectangle with width 1 and height 2");
-assert.deepEqual(generateRectangle(3,2,"empty"),"***\n***","Empty rectangle with width 2 and height 2");
-assert.deepEqual(generateRectangle(3,3,"empty"),"***\n* *\n***","Empty rectangle with width 2 and height 2");
+assert.deepEqual(generateRectangle(2,1,"empty"),"**","Empty rectangle with width 2 and height 1");
+assert.deepEqual(generateRectangle(2,2,"empty"),"**\n**","Empty rectangle with width 2 and height 2");
+assert.deepEqual(generateRectangle(3,2,"empty"),"***\n***","Empty rectangle with width 3 and height 2");
+assert.deepEqual(generateRectangle(3,3,"empty"),"***\n* *\n***","Empty rectangle with width 3 and height 3");
 displayTestReport("All tests passed for empty rectangle");
+
+/*...............alternating rectangle....................*/
+assert.deepEqual(generateRectangle(2,1,"alternating"),"**","Alternating rectangle with width 2 and height 1");
+assert.deepEqual(generateRectangle(2,2,"alternating"),"**\n--","Alternating rectangle with width 2 and height 2");
+assert.deepEqual(generateRectangle(3,2,"alternating"),"***\n---","Alternating rectangle with width 3 and height 2");
+assert.deepEqual(generateRectangle(3,3,"alternating"),"***\n---\n***","Alternating rectangle with width 3 and height 3");
+displayTestReport("All tests passed for alternating rectangle");
+
 console.log(repeatCharacter("⌱",102));
