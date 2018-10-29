@@ -2,10 +2,12 @@ const assert = require('assert');
 const triangleLibrary = require('../src/triangle.js');
 const testFrameWorkLibrary = require('./testFrameWork.js');
 const rectangleLibrary = require('../src/rectangle.js');
+const diamondLibrary = require('../src/diamond.js');
 
 const {display,repeatCharacter} = testFrameWorkLibrary;
 const {triangleRight,triangleLeft} = triangleLibrary;
 const {generateRectangle} = rectangleLibrary;
+const {generateAngledDmnd,generateDiamond} = diamondLibrary;
 
 /*....................test frame work.....................*/
 const displayTestReport = function(text){
@@ -45,5 +47,10 @@ assert.deepEqual(generateRectangle(2,2,"alternating"),"**\n--","Alternating rect
 assert.deepEqual(generateRectangle(3,2,"alternating"),"***\n---","Alternating rectangle with width 3 and height 2");
 assert.deepEqual(generateRectangle(3,3,"alternating"),"***\n---\n***","Alternating rectangle with width 3 and height 3");
 displayTestReport("All tests passed for alternating rectangle");
+
+/*...............filled diamond...........................*/
+assert.deepEqual(generateDiamond(1,"*")," *\n","filled diamond with height 1");
+assert.deepEqual(generateDiamond(2,"*")," *\n","filled diamond with height 2");
+assert.deepEqual(generateDiamond(3,"*"),"  *\n ***\n  *","filled diamond with height 3");
 
 console.log(repeatCharacter("⌱",102));
