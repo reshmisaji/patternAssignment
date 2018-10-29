@@ -6,7 +6,7 @@ const diamondLibrary = require('../src/diamond.js');
 
 const {display,repeatCharacter} = testFrameWorkLibrary;
 const {triangleRight,triangleLeft} = triangleLibrary;
-const {generateEmpty,generateRectangle,isOutLine,addCharacter,isEven,emptyRectangle} = rectangleLibrary;
+const {generateEmpty,generateRectangle,filledRectangle,isOutLine,addCharacter,isEven,emptyRectangle} = rectangleLibrary;
 const {generateAngledDmnd,generateDiamond} = diamondLibrary;
 
 /*....................test frame work.....................*/
@@ -99,5 +99,12 @@ assert.deepEqual(generateEmpty(2,1),"**","empty rectangle with width 2 and heigh
 assert.deepEqual(generateEmpty(2,2),"**\n**","empty rectangle with width 2 and height 2");
 assert.deepEqual(generateEmpty(3,3),"***\n* *\n***","empty rectangle with width 3 and height 3");
 displayTestReport("All tests passed for generate empty ");
+
+/*..................filled rectangle.............................*/
+assert.deepEqual(filledRectangle(2,""),"**","filled rectangle with width 2 ");
+assert.deepEqual(filledRectangle(2," ")," **","filled rectangle with width 2  ");
+assert.deepEqual(filledRectangle(3,""),"***","filled rectangle with width 3 ");
+displayTestReport("All tests passed for  filled line");
+
 
 console.log(repeatCharacter("⌱",102));

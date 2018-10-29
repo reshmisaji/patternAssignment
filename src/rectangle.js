@@ -115,3 +115,4 @@ exports.isEven = isEven;
 exports.addCharacter = addCharacter;
 exports.emptyRectangle = emptyRectangle;
 exports.generateEmpty = generateEmpty;
+exports.filledRectangle = filledRectangle;
