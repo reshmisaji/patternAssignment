@@ -32,4 +32,11 @@ assert.deepEqual(generateRectangle(1,2,"filled"),"*\n*","Filled rectangle with w
 assert.deepEqual(generateRectangle(2,2,"filled"),"**\n**","Filled rectangle with width 2 and height 2");
 displayTestReport("All tests passed for filled rectangle");
 
+/*................hollow rectangle........................*/
+assert.deepEqual(generateRectangle(2,1,"empty"),"**");//,"Empty rectangle with width 1 and height 1");
+assert.deepEqual(generateRectangle(2,1,"empty"),"**","Empty rectangle with width 2 and height 1 ");
+assert.deepEqual(generateRectangle(2,2,"empty"),"**\n**","Empty rectangle with width 1 and height 2");
+assert.deepEqual(generateRectangle(3,2,"empty"),"***\n***","Empty rectangle with width 2 and height 2");
+assert.deepEqual(generateRectangle(3,3,"empty"),"***\n* *\n***","Empty rectangle with width 2 and height 2");
+displayTestReport("All tests passed for empty rectangle");
 console.log(repeatCharacter("⌱",102));
