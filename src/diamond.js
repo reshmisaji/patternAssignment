@@ -79,3 +79,4 @@ const generateAngledDmnd = function(height){
 
 exports.generateAngledDmnd = generateAngledDmnd;
 exports.generateDiamond = generateDiamond;
+exports.generateLine = generateLine;
