@@ -67,7 +67,7 @@ const generateFilled = function(width,height){
   return line;
 }
 
-const alternatingRectangle = function(width,line){
+const alternatingRectangle = function(width,line,heightIndex){
   let row = line;
 
   for(let breadthIndex = 1; breadthIndex <= width; breadthIndex ++){
@@ -89,7 +89,7 @@ const generateAlternating = function(width,height){
   for(heightIndex = 0; heightIndex < height; heightIndex ++){
     line += lineDelimiter;
     lineDelimiter = "\n";
-    line = alternatingRectangle(width,line);
+    line = alternatingRectangle(width,line,heightIndex);
   }
   return line;
 }

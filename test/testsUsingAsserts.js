@@ -118,5 +118,10 @@ assert.deepEqual(generateAlternating(2,3),"**\n--\n**","alternating rectangle wi
 assert.deepEqual(generateAlternating(3,3),"***\n---\n***","alternating rectangle with width 3 and height 3");
 displayTestReport("All tests passed for generate alternating rectangle ");
 
+/*..................alternating rectangle.............................*/
+assert.deepEqual(alternatingRectangle(2,"",0),"**","alternating rectangle with width 2 and heightindex 0 ");
+assert.deepEqual(alternatingRectangle(3,"",1),"---","alternating rectangle with width 2 and heightindex 1 ");
+assert.deepEqual(alternatingRectangle(3," ",3)," ---","alternating rectangle with width 3 and heightindex 3");
+displayTestReport("All tests passed for alternating lines ");
 
 console.log(repeatCharacter("⌱",102));
