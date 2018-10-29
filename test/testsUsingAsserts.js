@@ -59,4 +59,9 @@ assert.deepEqual(generateDiamond(2," ")," *\n","hollow diamond with height 2");
 assert.deepEqual(generateDiamond(3," "),"  *\n * *\n  *","hollow diamond with height 3");
 displayTestReport("All the tests passed for hollow diamond");
 
+assert.deepEqual(generateAngledDmnd(1)," \n*\n ","angle diamond with height 1");
+assert.deepEqual(generateAngledDmnd(3)," *\n* *\n *","angle diamond with height 2");
+assert.deepEqual(generateAngledDmnd(5),"  *\n / \\\n*   *\n \\ /\n  *","angle diamond with height 3");
+displayTestReport("All the tests passed for angle diamond");
+
 console.log(repeatCharacter("⌱",102));
