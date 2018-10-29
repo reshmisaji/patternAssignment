@@ -1,18 +1,29 @@
 const assert = require('assert');
 const triangleLibrary = require('../src/triangle.js');
 const testFrameWorkLibrary = require('./testFrameWork.js');
+const rectangleLibrary = require('../src/rectangle.js');
+
 const {display,repeatCharacter} = testFrameWorkLibrary;
 const {triangleRight,triangleLeft} = triangleLibrary;
+const {generateRectangle} = rectangleLibrary;
 
-
+/*....................test frame work.....................*/
 const displayTestReport = function(text){
   console.log(repeatCharacter("⌱",102));
   console.log(display(text));
-  console.log(repeatCharacter("⌱",102));
 }
 
+/*.....................triangle right.....................*/
 assert.deepEqual(triangleRight(1),'*',"Triangle Right with height 1");
 assert.deepEqual(triangleRight(2),' *\n**',"Triangle Right with height 2");
 assert.deepEqual(triangleRight(3),'  *\n **\n***',"Triangle with height 3");
 displayTestReport("All tests passed for right triangle");
 
+/*..................triangle left.........................*/
+assert.deepEqual(triangleLeft(1),'*',"Triangle Left with height 1");
+assert.deepEqual(triangleLeft(2),'*\n**',"Triangle Left with height 2");
+assert.deepEqual(triangleLeft(3),'*\n**\n***',"Triangle with height 3");
+displayTestReport("All tests passed for left triangle");
+
+
+console.log(repeatCharacter("⌱",102));
