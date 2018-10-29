@@ -116,3 +116,4 @@ exports.addCharacter = addCharacter;
 exports.emptyRectangle = emptyRectangle;
 exports.generateEmpty = generateEmpty;
 exports.filledRectangle = filledRectangle;
+exports.generateFilled = generateFilled;
