@@ -25,5 +25,11 @@ assert.deepEqual(triangleLeft(2),'*\n**',"Triangle Left with height 2");
 assert.deepEqual(triangleLeft(3),'*\n**\n***',"Triangle with height 3");
 displayTestReport("All tests passed for left triangle");
 
+/*.................rectangle filled.......................*/
+assert.deepEqual(generateRectangle(1,1,"filled"),"*","Filled rectangle with width 1 and height 1");
+assert.deepEqual(generateRectangle(2,1,"filled"),"**","Filled rectangle with width 2 and height 1 ");
+assert.deepEqual(generateRectangle(1,2,"filled"),"*\n*","Filled rectangle with width 1 and height 2");
+assert.deepEqual(generateRectangle(2,2,"filled"),"**\n**","Filled rectangle with width 2 and height 2");
+displayTestReport("All tests passed for filled rectangle");
 
 console.log(repeatCharacter("⌱",102));
