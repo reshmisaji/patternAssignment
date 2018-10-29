@@ -76,4 +76,11 @@ assert.deepEqual(isOutLine(3,4),true);
 assert.deepEqual(isOutLine(4,4),false);
 displayTestReport("All tests passed for is out line");
 
+/*..............add character.............................*/
+assert.deepEqual(addCharacter("","*"),"*");
+assert.deepEqual(addCharacter(" ","-")," -");
+assert.deepEqual(addCharacter("*"," "),"* ");
+assert.deepEqual(addCharacter("- ","*"),"- *");
+displayTestReport("All tests passed for add character");
+
 console.log(repeatCharacter("⌱",102));
