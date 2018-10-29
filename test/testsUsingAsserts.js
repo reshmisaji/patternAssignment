@@ -52,5 +52,11 @@ displayTestReport("All tests passed for alternating rectangle");
 assert.deepEqual(generateDiamond(1,"*")," *\n","filled diamond with height 1");
 assert.deepEqual(generateDiamond(2,"*")," *\n","filled diamond with height 2");
 assert.deepEqual(generateDiamond(3,"*"),"  *\n ***\n  *","filled diamond with height 3");
+displayTestReport("All the tests passed for filled diamond");
+
+assert.deepEqual(generateDiamond(1," ")," *\n","hollow diamond with height 1");
+assert.deepEqual(generateDiamond(2," ")," *\n","hollow diamond with height 2");
+assert.deepEqual(generateDiamond(3," "),"  *\n * *\n  *","hollow diamond with height 3");
+displayTestReport("All the tests passed for hollow diamond");
 
 console.log(repeatCharacter("⌱",102));
