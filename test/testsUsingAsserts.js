@@ -6,7 +6,7 @@ const diamondLibrary = require('../src/diamond.js');
 
 const {display,repeatCharacter} = testFrameWorkLibrary;
 const {triangleRight,triangleLeft} = triangleLibrary;
-const {generateEmpty,generateFilled,generateRectangle,filledRectangle,isOutLine,addCharacter,isEven,emptyRectangle} = rectangleLibrary;
+const {generateAlternating,alternatingRectangle,generateEmpty,generateFilled,generateRectangle,filledRectangle,isOutLine,addCharacter,isEven,emptyRectangle} = rectangleLibrary;
 const {generateAngledDmnd,generateDiamond} = diamondLibrary;
 
 /*....................test frame work.....................*/
@@ -111,5 +111,12 @@ assert.deepEqual(generateFilled(2,2),"**\n**","filled rectangle with width 2 and
 assert.deepEqual(generateFilled(2,3),"**\n**\n**","filled rectangle with width 2 and height 3 ");
 assert.deepEqual(generateFilled(3,3),"***\n***\n***","filled rectangle with width 3 and height 3");
 displayTestReport("All tests passed for generate filled rectangle ");
+
+/*..................generate Alternating.............................*/
+assert.deepEqual(generateAlternating(2,2),"**\n--","alternating rectangle with width 2 and height 2 ");
+assert.deepEqual(generateAlternating(2,3),"**\n--\n**","alternating rectangle with width 2 and height 3 ");
+assert.deepEqual(generateAlternating(3,3),"***\n---\n***","alternating rectangle with width 3 and height 3");
+displayTestReport("All tests passed for generate alternating rectangle ");
+
 
 console.log(repeatCharacter("⌱",102));

@@ -117,3 +117,6 @@ exports.emptyRectangle = emptyRectangle;
 exports.generateEmpty = generateEmpty;
 exports.filledRectangle = filledRectangle;
 exports.generateFilled = generateFilled;
+exports.generateAlternating = generateAlternating;
+exports.alternatingRectangle = alternatingRectangle;
+
