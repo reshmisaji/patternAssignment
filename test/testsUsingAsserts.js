@@ -88,5 +88,10 @@ assert.deepEqual(isEven(1),false);
 assert.deepEqual(isEven(0),true);
 displayTestReport("All tests passed for is even");
 
+/*..................empty rectangle .............................*/
+assert.deepEqual(emptyRectangle(1,0,"",2),"*","empty rectangle with heightIndex 0 and height 2");
+assert.deepEqual(emptyRectangle(2,1,"*",4),"*  ","empty rectangle with heightIndex 1 and height 4");
+assert.deepEqual(emptyRectangle(2,1," *",4)," *  ","empty rectangle with heightIndex 1 and height 4");
+displayTestReport("All tests passed for empty rectangle");
 
 console.log(repeatCharacter("⌱",102));
