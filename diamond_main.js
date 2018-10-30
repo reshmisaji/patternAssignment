@@ -1,7 +1,7 @@
 const diamondLibrary = require('./src/diamond.js');
 const {generateAngledDmnd,generateDiamond} = diamondLibrary;
 
-const main = function(type =  process.argv[2],height = process.argv[3]){
+const main = function(type,height){
   height = height - (height % 2) + 1;
 
   if(type == "filled"){
@@ -13,4 +13,4 @@ const main = function(type =  process.argv[2],height = process.argv[3]){
   }
 }
 
-main();
+main(process.argv[2],process.argv[3]);
