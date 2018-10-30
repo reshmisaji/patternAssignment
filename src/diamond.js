@@ -64,7 +64,7 @@ const generateDiamond = function(height,middleChar){
 
 /*................Generate Angled Diamond...............................*/
 
-const generateAngledDmnd = function(height){
+const generateAngledDiamond = function(height){
   let diamond = "";
   let halfHeight = Math.ceil(height/2);
   diamond += generateLine(halfHeight," "," ","*") + "\n";//firstline
@@ -83,7 +83,7 @@ const generateAngledDmnd = function(height){
   return diamond;
 }
 
-exports.generateAngledDmnd = generateAngledDmnd;
+exports.generateAngledDiamond = generateAngledDiamond;
 exports.generateDiamond = generateDiamond;
 exports.generateLine = generateLine;
 exports.generateTriangle = generateTriangle;
