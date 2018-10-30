@@ -1,6 +1,6 @@
 const assert = require('assert');
 const triangleLibrary = require('../src/triangle.js');
-const testFrameWorkLibrary = require('./testFrameWork.js');
+const testFrameWorkLibrary = require('./test_frame_work.js');
 const rectangleLibrary = require('../src/rectangle.js');
 const diamondLibrary = require('../src/diamond.js');
 
