@@ -1,9 +1,9 @@
 const diamondLibrary = require('./src/diamond.js');
-const {determineLength,generateAngledDmnd,generateDiamond} = diamondLibrary;
+const {determineLength,generateAngledDiamond,generateDiamond} = diamondLibrary;
 
 const main = function(type,height){
   let length = determineLength(height); 
-  let diamondType = {filled : generateDiamond(length,"*"),hollow : generateDiamond(length," "),angled : generateAngledDmnd(length)};
+  let diamondType = {filled : generateDiamond(length,"*"),hollow : generateDiamond(length," "),angled : generateAngledDiamond(length)};
 
   console.log(diamondType[type]);
 }
