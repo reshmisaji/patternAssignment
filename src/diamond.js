@@ -81,3 +81,4 @@ exports.generateAngledDmnd = generateAngledDmnd;
 exports.generateDiamond = generateDiamond;
 exports.generateLine = generateLine;
 exports.generateTriangle = generateTriangle;
+exports.generateTriangleRev = generateTriangleRev;
