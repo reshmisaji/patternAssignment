@@ -7,7 +7,7 @@ const diamondLibrary = require('../src/diamond.js');
 const {display,repeatCharacter} = testFrameWorkLibrary;
 const {triangleRight,triangleLeft} = triangleLibrary;
 const {generateAlternating,alternatingRectangle,generateEmpty,generateFilled,generateRectangle,filledRectangle,isOutLine,addCharacter,isEven,emptyRectangle} = rectangleLibrary;
-const {generateTriangleRev,generateAngledDmnd,generateTriangle,generateLine,generateDiamond} = diamondLibrary;
+const {generateTriangleRev,generateAngledDiamond,generateTriangle,generateLine,generateDiamond} = diamondLibrary;
 
 /*....................test frame work.....................*/
 const displayTestReport = function(text){
@@ -61,9 +61,9 @@ assert.deepEqual(generateDiamond(3," "),"  *\n * *\n  *","hollow diamond with he
 displayTestReport("All the tests passed for hollow diamond");
 
 /*...............angled diamond...........................*/
-assert.deepEqual(generateAngledDmnd(1)," \n*\n ","angle diamond with height 1");
-assert.deepEqual(generateAngledDmnd(3)," *\n* *\n *","angle diamond with height 2");
-assert.deepEqual(generateAngledDmnd(5),"  *\n / \\\n*   *\n \\ /\n  *","angle diamond with height 3");
+assert.deepEqual(generateAngledDiamond(1)," \n*\n ","angle diamond with height 1");
+assert.deepEqual(generateAngledDiamond(3)," *\n* *\n *","angle diamond with height 2");
+assert.deepEqual(generateAngledDiamond(5),"  *\n / \\\n*   *\n \\ /\n  *","angle diamond with height 3");
 displayTestReport("All the tests passed for angle diamond");
 
 console.log(repeatCharacter("⌱",102));
