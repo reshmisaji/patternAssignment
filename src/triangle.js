@@ -1,3 +1,7 @@
+const addCharacter = function(line,character){
+let row = line;
+  return row += character;
+}
 
 const triangleLeft = function(number){
   let line="";
@@ -8,7 +12,7 @@ const triangleLeft = function(number){
     delimiter="\n";
 
     for(let innerIndex =1; innerIndex <=index; innerIndex++){
-      line +="*";
+      line = addCharacter(line,"*");
     }
   }
   return line;
@@ -25,9 +29,9 @@ const triangleRight = function(number){
     for(let innerIndex =1; innerIndex <=number; innerIndex++){
 
       if(innerIndex <= (number-index)){
-        line +=" ";
+        line = addCharacter(line," ");
       } else {
-        line += "*";
+        line = addCharacter(line,"*");
       }
     }
   }
