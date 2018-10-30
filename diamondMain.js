@@ -1,4 +1,4 @@
-const diamondLibrary = require('./diamond.js');
+const diamondLibrary = require('./src/diamond.js');
 const {generateAngledDmnd,generateDiamond} = diamondLibrary;
 
 const main = function(type =  process.argv[2],height = process.argv[3]){
