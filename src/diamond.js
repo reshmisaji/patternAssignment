@@ -1,3 +1,9 @@
+/*...................determine height..............................*/
+const determineLength = function(height){
+  return (height-(height%2)+1);
+}
+
+
 /*......................Generate Line....................................*/
 
 const generateLine = function(length,starChar,middleChar,endChar){
@@ -82,3 +88,4 @@ exports.generateDiamond = generateDiamond;
 exports.generateLine = generateLine;
 exports.generateTriangle = generateTriangle;
 exports.generateTriangleRev = generateTriangleRev;
+exports.determineLength = determineLength;
