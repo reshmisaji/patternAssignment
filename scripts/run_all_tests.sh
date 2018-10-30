@@ -1,5 +1,11 @@
 #! /bin/bash
 set -e
+handler(){
+  if [ $? != 0 ]; then
+    echo 'Oops...tests failed...!'
+  fi
+}
+trap 'handler' EXIT
 ./run_test.sh ../triangle_main.js ../appTestData/input/inputFileLeft ../appTestData/output/expectedOutputLeft
 ./run_test.sh ../triangle_main.js ../appTestData/input/inputFileRight ../appTestData/output/expectedOutputRight
 
