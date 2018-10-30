@@ -3,7 +3,7 @@ const {determineLength,generateAngledDmnd,generateDiamond} = diamondLibrary;
 
 const main = function(type,height){
   let length = determineLength(height); 
-  let diamondType = {filled : generateDiamond(height,"*"),hollow : generateDiamond(height," "),angled : generateAngledDmnd(height)};
+  let diamondType = {filled : generateDiamond(length,"*"),hollow : generateDiamond(length," "),angled : generateAngledDmnd(length)};
 
   console.log(diamondType[type]);
 }
