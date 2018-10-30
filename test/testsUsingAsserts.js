@@ -7,7 +7,7 @@ const diamondLibrary = require('../src/diamond.js');
 const {display,repeatCharacter} = testFrameWorkLibrary;
 const {triangleRight,triangleLeft} = triangleLibrary;
 const {generateAlternating,alternatingRectangle,generateEmpty,generateFilled,generateRectangle,filledRectangle,isOutLine,addCharacter,isEven,emptyRectangle} = rectangleLibrary;
-const {generateAngledDmnd,generateLine,generateDiamond} = diamondLibrary;
+const {generateAngledDmnd,generateTriangle,generateLine,generateDiamond} = diamondLibrary;
 
 /*....................test frame work.....................*/
 const displayTestReport = function(text){
@@ -130,6 +130,11 @@ assert.deepEqual(generateLine(2,"/"," ","\\"),"/\\","generate line with width 2"
 assert.deepEqual(generateLine(3,"*"," ","*"),"* *","generate line with width 3 and heightindex 3");
 displayTestReport("All tests passed for generating lines ");
 
+/*..................generate Triangle.............................*/
+assert.deepEqual(generateTriangle(3," "),"   *\n  * *\n *   *","generate triangle with width 3 ");
+assert.deepEqual(generateTriangle(2,"*\n "),"  *\n **\n *","generate triangle with width 2");
+assert.deepEqual(generateTriangle(3,"*"),"   *\n  ***\n *****","generate triangle with width 3 ");
+displayTestReport("All tests passed for generating triangles ");
 
 
 console.log(repeatCharacter("⌱",102));
