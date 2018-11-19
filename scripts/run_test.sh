@@ -43,7 +43,7 @@ for line in ${lines[*]}; do
   echo "-------------------------------"
   echo "Running test with input ${line}"
   output=$(node $script ${line[*]})
-  echo $output | tee -a ${actual_output} 
+  echo "$output" | tee -a ${actual_output} 
 done
 echo "-------------------------------"
 

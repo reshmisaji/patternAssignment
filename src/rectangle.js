@@ -49,7 +49,7 @@ const filledRectangle = function(width,line){
   let character;
 
   for(let widthIndex = 0; widthIndex < width; widthIndex ++){
-    let character = "*";
+    character = "*";
     row = addCharacter(row,character);
   }
   return row;
@@ -95,6 +95,8 @@ const generateAlternating = function(width,height){
 }
 
 const generateRectangle = function(width,height,type){
+  let line = '';
+
   if(type == "empty"){
     line = generateEmpty(width,height);
   }

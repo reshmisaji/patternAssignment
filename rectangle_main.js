@@ -6,5 +6,5 @@ const main = function(type,width,height){
   console.log(generateRectangle(width,height,type));
 }
 
-main(process.argv[2],process.argv[3],process.argv[4]);
+main(process.argv[2],+process.argv[3],+process.argv[4]);
 
