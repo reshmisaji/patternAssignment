@@ -1,7 +1,5 @@
-const addCharacter = function(line,character){
-let row = line;
-  return row += character;
-}
+/*..............Library functions of triangle............*/
+const addCharacter = require('./patternsUtil.js').addCharacter;
 
 const triangleLeft = function(number){
   let line="";
@@ -37,7 +35,6 @@ const triangleRight = function(number){
   }
   return line;
 }
-
 
 exports.triangleRight = triangleRight;
 exports.triangleLeft = triangleLeft;

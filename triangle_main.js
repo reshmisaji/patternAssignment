@@ -1,4 +1,4 @@
-const triangleLibrary = require('./src/triangle.js');
+const triangleLibrary = require('./src/patternsLibrary.js');
 const {triangleRight,triangleLeft} = triangleLibrary;
 
 const main = function(align,number){
