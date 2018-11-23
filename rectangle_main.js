@@ -1,5 +1,5 @@
 /*.............Rectangle Main...................*/
-const rectangleLibrary = require('./src/rectangle.js');
+const rectangleLibrary = require('./src/patternsLibrary.js');
 const {generateRectangle} = rectangleLibrary;
 
 const main = function(type,width,height){

@@ -1,12 +1,12 @@
 const assert = require('assert');
-const triangleLibrary = require('../src/triangle.js');
 const testFrameWorkLibrary = require('./test_frame_work.js');
-const rectangleLibrary = require('../src/rectangle.js');
+const patternsUtil = require('../src/patternsUtil.js');
+const patternsLibrary = require('../src/patternsLibrary.js');
 const diamondLibrary = require('../src/diamond.js');
 
 const {display,repeatCharacter} = testFrameWorkLibrary;
-const {triangleRight,triangleLeft} = triangleLibrary;
-const {generateAlternating,alternatingRectangle,generateEmpty,generateFilled,generateRectangle,filledRectangle,isOutLine,addCharacter,isEven,emptyRectangle} = rectangleLibrary;
+const {triangleRight,triangleLeft,generateAlternating,alternatingRectangle,generateEmpty,generateFilled,generateRectangle,filledRectangle,emptyRectangle} = patternsLibrary;
+const {isOutLine,addCharacter,isEven} = patternsUtil;
 const {generateTriangleRev,generateAngledDiamond,generateTriangle,generateLine,generateDiamond} = diamondLibrary;
 
 /*....................test frame work.....................*/
