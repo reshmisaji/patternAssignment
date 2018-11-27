@@ -6,8 +6,8 @@ const diamondLibrary = require('../src/diamond.js');
 
 const {display,repeatCharacter} = testFrameWorkLibrary;
 const {triangleRight,triangleLeft,generateAlternating,alternatingRectangle,generateEmpty,generateFilled,generateRectangle,filledRectangle,emptyRectangle} = patternsLibrary;
-const {isOutLine,addCharacter,isEven} = patternsUtil;
-const {generateTriangleRev,generateAngledDiamond,generateTriangle,generateLine,generateDiamond} = diamondLibrary;
+const {isOutLine,addCharacter,isEven,generateLine} = patternsUtil;
+const {generateTriangleRev,generateAngledDiamond,generateTriangle,generateDiamond} = diamondLibrary;
 
 /*....................test frame work.....................*/
 const displayTestReport = function(text){

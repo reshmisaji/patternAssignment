@@ -144,6 +144,8 @@ const generateRectangle = function(width,height,type){
   return line;
 }
 
+
+
 exports.generateRectangle = generateRectangle;
 exports.emptyRectangle = emptyRectangle;
 exports.generateEmpty = generateEmpty;

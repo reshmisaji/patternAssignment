@@ -1,24 +1,9 @@
 /*...................determine height..............................*/
-const determineLength = function(height){
-  return (height-(height%2)+1);
-}
+const {generateLine} = require('./patternsUtil.js');
 
 
 /*......................Generate Line....................................*/
 
-const generateLine = function(length,starChar,middleChar,endChar){
-  let line = "";
-  line += starChar;
-
-  for(pos = 1;pos<=length-2;pos++){
-    line += middleChar;
-  }
-  
-  if(length !=1){
-    line += endChar;
-  }
-  return line;
-}
 
 /*......................Generate Triangle.................................*/
 
@@ -85,7 +70,5 @@ const generateAngledDiamond = function(height){
 
 exports.generateAngledDiamond = generateAngledDiamond;
 exports.generateDiamond = generateDiamond;
-exports.generateLine = generateLine;
 exports.generateTriangle = generateTriangle;
 exports.generateTriangleRev = generateTriangleRev;
-exports.determineLength = determineLength;

@@ -1,6 +1,7 @@
 const diamondLibrary = require('./src/diamond.js');
-const {determineLength,generateAngledDiamond,generateDiamond} = diamondLibrary;
-
+const patternLibrary = require('./src/patternsUtil.js');
+const {generateAngledDiamond,generateDiamond} = diamondLibrary;
+const {determineLength} = patternLibrary;
 const main = function(type,height){
   let length = determineLength(height); 
   let diamondType = {filled : generateDiamond(length,"*"),hollow : generateDiamond(length," "),angled : generateAngledDiamond(length)};
