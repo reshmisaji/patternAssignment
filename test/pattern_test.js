@@ -2,12 +2,10 @@ const {deepEqual} = require('assert');
 const testFrameWorkLibrary = require('./test_frame_work.js');
 const patternsUtil = require('../src/patternsUtil.js');
 const patternsLibrary = require('../src/patternsLibrary.js');
-const diamondLibrary = require('../src/diamond.js');
 
 const {display,repeatCharacter} = testFrameWorkLibrary;
-const {triangleRight,triangleLeft,generateAlternating,alternatingRectangle,generateEmpty,generateFilled,generateRectangle,filledRectangle,emptyRectangle} = patternsLibrary;
+const {generateTriangleRev,generateAngledDiamond,generateTriangle,generateDiamond,triangleRight,triangleLeft,generateAlternating,alternatingRectangle,generateEmpty,generateFilled,generateRectangle,filledRectangle,emptyRectangle} = patternsLibrary;
 const {isOutLine,addCharacter,isEven,generateLine} = patternsUtil;
-const {generateTriangleRev,generateAngledDiamond,generateTriangle,generateDiamond} = diamondLibrary;
 
 /*....................test frame work.....................*/
 const displayTestReport = function(text){

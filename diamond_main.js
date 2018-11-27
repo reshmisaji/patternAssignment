@@ -1,4 +1,4 @@
-const diamondLibrary = require('./src/diamond.js');
+const diamondLibrary = require('./src/patternsLibrary.js');
 const patternLibrary = require('./src/patternsUtil.js');
 const {generateAngledDiamond,generateDiamond} = diamondLibrary;
 const {determineLength} = patternLibrary;

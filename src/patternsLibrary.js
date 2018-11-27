@@ -1,6 +1,6 @@
- /*.............getting util functions.....................*/
+/*.............getting util functions.....................*/
 const patternsLibrary = require('./patternsUtil.js');
-const {addCharacter,isEven,isOutLine} = patternsLibrary;
+const {addCharacter,isEven,isOutLine,generateLine} = patternsLibrary;
 
 /*..............Library functions of triangle............*/
 
@@ -144,8 +144,62 @@ const generateRectangle = function(width,height,type){
   return line;
 }
 
+const generateTriangle = function(height,middleChar){
+  let triangle ="";
+  delimiter = "";
 
+  for(let lineNo = 1; lineNo <= height; lineNo++){
+    let noOfSpaces = (height - lineNo)+1;
+    let line = generateLine((2*lineNo)-1,"*",middleChar,"*");
+    let spaces = generateLine(noOfSpaces," "," "," ");
+    triangle += delimiter +spaces+line;
+    delimiter = "\n"
+  } 
+  return triangle;
+}
 
+const generateTriangleRev = function(height,middleChar){
+  let triangle ="";
+  delimiter = "";
+
+  for(let lineNo = height; lineNo >= 1; lineNo--){
+    let noOfSpaces = (height - lineNo)+2;
+    let line = generateLine((2*lineNo)-1,"*",middleChar,"*");
+    let spaces = generateLine(noOfSpaces," "," "," ");
+    triangle += delimiter +spaces+line;
+    delimiter = "\n"
+  } 
+  return triangle;
+}
+
+const generateDiamond = function(height,middleChar){
+  let diamond = "";
+  let halfHeight = Math.ceil(height/2);
+  diamond += generateTriangle(halfHeight,middleChar) + "\n";
+  diamond += generateTriangleRev(halfHeight-1,middleChar);
+  return diamond;
+}
+
+const generateAngledDiamond = function(height){
+  let diamond = "";
+  let halfHeight = Math.ceil(height/2);
+  diamond += generateLine(halfHeight," "," ","*") + "\n";//firstline
+
+  for(let lineNo = 2; lineNo < halfHeight; lineNo++){//firsthalf
+    diamond += generateLine(halfHeight - lineNo ," "," "," ");
+    diamond += generateLine((2*lineNo)-1,"/"," ","\\") + "\n";
+  }
+  diamond += generateLine(height,"*"," ","*") + "\n";//middleline
+  
+  for(let lineNo = halfHeight-1; lineNo > 1; lineNo--){//partaftermiddle
+    diamond += generateLine(halfHeight - lineNo ," "," "," ");
+    diamond += generateLine((2*lineNo)-1,"\\"," ","/") + "\n";
+  }
+  diamond += generateLine(halfHeight," "," ","*"); //last line
+  return diamond;
+}
+
+exports.generateDiamond = generateDiamond;
 exports.generateRectangle = generateRectangle;
 exports.emptyRectangle = emptyRectangle;
 exports.generateEmpty = generateEmpty;
@@ -153,4 +207,7 @@ exports.filledRectangle = filledRectangle;
 exports.generateFilled = generateFilled;
 exports.generateAlternating = generateAlternating;
 exports.alternatingRectangle = alternatingRectangle;
+exports.generateTriangleRev = generateTriangleRev;
+exports.generateAngledDiamond = generateAngledDiamond;
+exports.generateTriangle = generateTriangle;
 
