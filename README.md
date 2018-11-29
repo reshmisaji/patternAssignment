@@ -49,4 +49,4 @@ node createPattern.js mirror right_triangle 7 left_triangle 7
     ** **     
      * *      
 
-
+</pre>
